@@ -9,15 +9,18 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
   use ({
-	  "olimorris/onedarkpro.nvim",
-	  as = 'onedark',
+	  "marko-cerovac/material.nvim",
+	  as = 'material',
 	  config = function()
-		  vim.cmd("colorscheme onedark")
+		  vim.cmd("colorscheme material")
 	  end
   })
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
+  use('nvim-lualine/lualine.nvim')
+  use('nvim-tree/nvim-tree.lua')
+  use('nvim-tree/nvim-web-devicons')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
   
